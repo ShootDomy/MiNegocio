@@ -137,14 +137,70 @@ Ejercicio Practico en Spring Boot
 
 ### DIRECCION
 
-| Método | Ruta                             | Descripción                      |
-| ------ | -------------------------------- | -------------------------------- |
-| GET    | `/api/direccion`                 | Obtener todas las direcciones    |
-| GET    | `/api/direccion/{dirId}`         | Obtener dirección por `dirId`    |
-| GET    | `/api/direccion/buscar/{buscar}` | Buscar dirección por parámetro   |
-| POST   | `/api/direccion`                 | Crear nueva dirección            |
-| PATCH  | `/api/direccion/{dirId}`         | Actualizar dirección por `dirId` |
-| DELETE | `/api/direccion/{dirId}`         | Eliminar dirección por `dirId`   |
+| Método | Ruta             | Descripción           |
+| ------ | ---------------- | --------------------- |
+| POST   | `/api/direccion` | Crear nueva dirección |
+
+**Body:**
+
+```json
+{
+  "dirProvincia": "PICHINCHA",
+  "dirCiudad": "QUITO 1",
+  "dirdireccion": "ASD",
+  "dirMatriz": true,
+  "cliId": 2
+}
+```
+
+**Response:**
+
+```json
+{
+  "dirId": 1,
+  "dirProvincia": "PICHINCHA",
+  "dirCiudad": "QUITO 1",
+  "dirdireccion": "ASD",
+  "dirMatriz": true,
+  "cliId": 2
+}
+```
+
+| Método | Ruta                     | Descripción                      |
+| ------ | ------------------------ | -------------------------------- |
+| PATCH  | `/api/direccion/{dirId}` | Actualizar dirección por `dirId` |
+
+**Body:**
+
+```json
+{
+  "dirProvincia": "PICHINCHA",
+  "dirCiudad": "QUITO",
+  "dirdireccion": "QUITO NORTE PATCH",
+  "dirMatriz": false,
+  "cliId": 6
+}
+```
+
+**Response:**
+
+```json
+{
+  "dirId": 4,
+  "dirProvincia": "PICHINCHA",
+  "dirCiudad": "QUITO",
+  "dirdireccion": "QUITO NORTE PATCH",
+  "dirMatriz": false,
+  "cliId": 6
+}
+```
+
+| Método | Ruta                             | Descripción                    |
+| ------ | -------------------------------- | ------------------------------ |
+| GET    | `/api/direccion`                 | Obtener todas las direcciones  |
+| GET    | `/api/direccion/{dirId}`         | Obtener dirección por `dirId`  |
+| GET    | `/api/direccion/buscar/{buscar}` | Buscar dirección por parámetro |
+| DELETE | `/api/direccion/{dirId}`         | Eliminar dirección por `dirId` |
 
 ```
 
