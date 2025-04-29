@@ -3,9 +3,24 @@
 Ejercicio Practico en Spring Boot
 
 ```markdown
-# 📌 Proyecto: API de Pacientes
+# 📌 Proyecto: API de Clientes
 
-API REST construida con Spring Boot que permite gestionar pacientes, citas médicas y profesionales de salud.
+El sistema Mi Negocio permite registrar facturas eficientemente para todos los usuarios, ya sean consumidores finales o clientes registrados. En la actualidad, se pretende optimizar el proceso de facturación a través de la incorporación de una buena administración de clientes.
+
+## ✨ Mejoras propuestas
+
+- Cada empresa que usa el sistema debe contar con su propia base de clientes.
+- Al momento de facturar, se debe poder buscar clientes por nombre o número de identificación.
+
+## 🎯 Funcionalidades requeridas
+
+- Registrar nuevos clientes.
+- Editar, eliminar y buscar clientes existentes.
+- Permitir que cada cliente tenga múltiples direcciones (por ejemplo, sucursales).
+- Registrar una única dirección matriz por cliente (no puede haber más de una).
+- Durante la facturación, se debe poder:
+  - Seleccionar otra dirección distinta a la matriz.
+  - Registrar una nueva dirección en ese mismo momento si es necesario.
 
 ## 📦 Características
 
