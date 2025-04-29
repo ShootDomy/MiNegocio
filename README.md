@@ -2,7 +2,7 @@
 
 Ejercicio Practico en Spring Boot
 
-```markdown
+````markdown
 # 📌 Proyecto: API de Pacientes
 
 API REST construida con Spring Boot que permite gestionar pacientes, citas médicas y profesionales de salud.
@@ -15,7 +15,6 @@ API REST construida con Spring Boot que permite gestionar pacientes, citas médi
   - Validación de tamaño de telefono
 - Manejo global de errores (ExceptionHandler)
 - Base de datos relacional con JPA/Hibernate => Postgres
-```
 
 ## 🛠 Endpoints principales
 
@@ -50,6 +49,7 @@ API REST construida con Spring Boot que permite gestionar pacientes, citas médi
   ]
 }
 ```
+````
 
 **RESPONSE:**
 
@@ -216,7 +216,3 @@ API REST construida con Spring Boot que permite gestionar pacientes, citas médi
 | GET    | `/api/direccion/{dirId}`         | Obtener dirección por `dirId`  |
 | GET    | `/api/direccion/buscar/{buscar}` | Buscar dirección por parámetro |
 | DELETE | `/api/direccion/{dirId}`         | Eliminar dirección por `dirId` |
-
-```
-
-```
