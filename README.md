@@ -6,9 +6,9 @@ Ejercicio Practico en Spring Boot
 
 ### CLIENTE
 
-| Método | Ruta                           | Descripción                    | JSON               |
-| ------ | ------------------------------ | ------------------------------ | ------------------ |
-| GET    | `/api/cliente`                 | Obtener todos los clientes     | ```json {"test":1} |
+| Método | Ruta                           | Descripción                    | JSON                  |
+| ------ | ------------------------------ | ------------------------------ | --------------------- |
+| GET    | `/api/cliente`                 | Obtener todos los clientes     | `json { "test": 1 } ` |
 | GET    | `/api/cliente/{cliId}`         | Obtener cliente por `cliId`    |
 | GET    | `/api/cliente/buscar/{buscar}` | Buscar cliente por parámetro   |
 | POST   | `/api/cliente`                 | Crear nuevo cliente            |
