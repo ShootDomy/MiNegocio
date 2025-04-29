@@ -2,18 +2,22 @@
 
 Ejercicio Practico en Spring Boot
 
-```markdown
 # 📌 Proyecto: API de Clientes
 
+```markdown
 El sistema Mi Negocio permite registrar facturas eficientemente para todos los usuarios, ya sean consumidores finales o clientes registrados. En la actualidad, se pretende optimizar el proceso de facturación a través de la incorporación de una buena administración de clientes.
+```
 
 ## ✨ Mejoras propuestas
 
+```markdown
 - Cada empresa que usa el sistema debe contar con su propia base de clientes.
 - Al momento de facturar, se debe poder buscar clientes por nombre o número de identificación.
+```
 
 ## 🎯 Funcionalidades requeridas
 
+```markdown
 - Registrar nuevos clientes.
 - Editar, eliminar y buscar clientes existentes.
 - Permitir que cada cliente tenga múltiples direcciones (por ejemplo, sucursales).
@@ -21,9 +25,11 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 - Durante la facturación, se debe poder:
   - Seleccionar otra dirección distinta a la matriz.
   - Registrar una nueva dirección en ese mismo momento si es necesario.
+```
 
 ## 📦 Características
 
+```markdown
 - CRUD de clientes y direcciones
 - Validación para creación y axtualizacion de clientes
   - Validación de identificacion => longitud y si la identificación ya existe
