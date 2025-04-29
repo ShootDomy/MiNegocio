@@ -24,11 +24,51 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 ## 📦 Características
 
 - CRUD de clientes y direcciones
-- Validación para creación y axtualizacion de clientes
+- Validación para creación y actualizacion de clientes
   - Validación de identificacion => longitud y si la identificación ya existe
-  - Validación de tamaño de telefono
+  - Validación de longitud de telefono
 - Manejo global de errores (ExceptionHandler)
 - Base de datos relacional con JPA/Hibernate => Postgres
+
+## ▶️ Cómo ejecutar el proyecto
+
+###🔧 Requisitos previos
+
+- Java 17
+- Maven 3.8+
+- PostgreSQL (u otra base de datos, según tu configuración)
+- (Opcional) Postman para probar la API
+
+### 🛠 Clonar el proyecto
+
+```bash
+git https://github.com/ShootDomy/MiNegocio.git
+cd minegocio
+```
+
+### 🧹 Compilar y construir el proyecto
+
+```bash
+mvn clean install
+```
+
+### ⚙️ Configurar variables de entorno
+
+Asegúrese de que el archivo application.properties contenga la configuración correcta para tu base de datos:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/alquimia
+spring.datasource.username=postgres
+spring.datasource.password=admin
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+```
+
+###▶️ Ejecutar el proyecto
+
+```bash
+mvn spring-boot:run
+```
 
 ## 🛠 Endpoints principales
 
@@ -232,7 +272,7 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 
 ## 🧪 Colección de Postman
 
-Puedes importar esta colección en Postman para probar los endpoints fácilmente:
+Puede importar esta colección en Postman para probar los endpoints fácilmente:
 
 📁 [Descargar colección](./src/Postman/Mi-Negocio.postman_collection.json)
 
@@ -240,7 +280,7 @@ Puedes importar esta colección en Postman para probar los endpoints fácilmente
 
 ### 📥 ¿Cómo importar en Postman?
 
-1. Abre Postman.
-2. Haz clic en `Import`.
-3. Selecciona el archivo `./src/Postman/Mi-Negocio.postman_collection.json`.
+1. Abrir Postman.
+2. Hacer clic en `Import`.
+3. Seleccionar el archivo `./src/Postman/Mi-Negocio.postman_collection.json`.
 4. ¡Listo! Ya se puede ejecutar los endpoints.
