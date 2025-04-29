@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.alquimia.minegocio.dto.DireccionDto;
 import com.alquimia.minegocio.entity.Direccion;
+import com.alquimia.minegocio.exception.BusinessException;
 import com.alquimia.minegocio.exception.ResourceNotFoundException;
 import com.alquimia.minegocio.mapper.DireccionMapper;
 import com.alquimia.minegocio.repository.DireccionRepository;
@@ -27,7 +28,9 @@ public class DireccionServiceImpl implements DireccionService {
 
             return DireccionMapper.mapToDireccionDto(guardar);
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'createdireccion'");
+            throw new BusinessException("ERROR AL CREAR LA DIRECCIÓN");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'createdireccion'");
         }
     }
 
@@ -39,7 +42,9 @@ public class DireccionServiceImpl implements DireccionService {
                     .orElseThrow(() -> new ResourceNotFoundException("NO SE HA ENCONTRADO UNA DIRECION CON ESE ID"));
             return DireccionMapper.mapToDireccionDto(direccion);
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'getdireccionById'");
+            throw new BusinessException("ERROR AL OBTENER LA DIRECCION POR ID");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'getdireccionById'");
         }
     }
 
@@ -51,7 +56,9 @@ public class DireccionServiceImpl implements DireccionService {
             return direcciones.stream().map((direccion) -> DireccionMapper.mapToDireccionDto(direccion))
                     .collect((Collectors.toList()));
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'getAlldireccion'");
+            throw new BusinessException("ERROR AL OBTENER TODAS LAS DIRECCIONES");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'getAlldireccion'");
         }
     }
 
@@ -71,7 +78,9 @@ public class DireccionServiceImpl implements DireccionService {
 
             return DireccionMapper.mapToDireccionDto(actualizar);
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'updatedireccion'");
+            throw new BusinessException("ERROR AL ACTUALIZAR LA DIRECCIÓN");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'updatedireccion'");
         }
     }
 
@@ -83,7 +92,9 @@ public class DireccionServiceImpl implements DireccionService {
 
             direccionRepository.deleteById(dirId);
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'deletedireccionById'");
+            throw new BusinessException("ERROR AL ELIMINAR LA DIRECCIÓN");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'deletedireccionById'");
         }
     }
 
@@ -99,7 +110,9 @@ public class DireccionServiceImpl implements DireccionService {
                     .collect((Collectors.toList()));
 
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Unimplemented method 'obtenerDireccionByCliente'");
+            throw new BusinessException("ERROR AL OBTENER LAS DIRECCIONES POR CLIENTE");
+            // throw new UnsupportedOperationException("Unimplemented method
+            // 'obtenerDireccionByCliente'");
         }
     }
 }

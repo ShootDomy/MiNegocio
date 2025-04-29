@@ -20,4 +20,14 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
             "WHERE (cli_num_identificacion || '-' || UPPER(cli_nombre)) LIKE :buscar " +
             "ORDER BY cli_num_identificacion", nativeQuery = true)
     List<Cliente> obtenerClienteNomIden(@Param("buscar") String buscar);
+
+    /**
+     * OBTENER CLIENTES FILTRADOS POR IDENTIFICACION
+     */
+    @Query(value = "SELECT cli_id, cli_tipo_identificacion, cli_num_identificacion, " +
+            "cli_nombre, cli_correo, cli_telefono " +
+            "FROM cliente " +
+            "WHERE cli_num_identificacion = :buscar " +
+            "ORDER BY cli_num_identificacion", nativeQuery = true)
+    List<Cliente> obtenerClienteByIdentificacion(@Param("buscar") String buscar);
 }
