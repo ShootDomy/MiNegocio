@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "5d21a0dc-dda2-4938-b51a-9ec184255f67",
+		"name": "Mi Negocio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16857415"
+	},
+	"item": [
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "1. Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/*{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0104700833\",\r\n    \"cliNombre\": \"FERNANDA Vintimilla\",\r\n    \"cliCorreo\": \"correo@gmail.com\",\r\n    \"cliTelefono\": \"9999999999\"\r\n}*/\r\n\r\n{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0987456324\",\r\n    \"cliNombre\": \"Maria Rosal\",\r\n    \"cliCorreo\": \"maria.rosal@example.com\",\r\n    \"cliTelefono\": \"097456324\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas y Naciones Unidas\",\r\n            \"dirMatriz\": true\r\n        },\r\n        {\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2000\",\r\n            \"dirMatriz\": false\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Actualizar cliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/*{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0104700822\",\r\n    \"cliNombre\": \"FERNANDA Vintimilla\",\r\n    \"cliCorreo\": \"correo@gmail.com\",\r\n    \"cliTelefono\": \"9999999999\"\r\n}*/\r\n{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0987456321\",\r\n    \"cliNombre\": \"Maria Rosal NEW\",\r\n    \"cliCorreo\": \"maria.rosal@example.com\",\r\n    \"cliTelefono\": \"097456324\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas y Naciones Unidas\",\r\n            \"dirMatriz\": true\r\n        },\r\n        {\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2000\",\r\n            \"dirMatriz\": false\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Obtener cliente by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Buscar por nombre o identificacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/buscar/patch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"buscar",
+								"patch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "direccion",
+			"item": [
+				{
+					"name": "1. Crear direccion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO 1\",\r\n    \"dirdireccion\": \"ASD\",\r\n    \"dirMatriz\": true,\r\n    \"cliId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/direccion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Actualizar direccion",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO\",\r\n    \"dirdireccion\": \"QUITO NORTE PATCH\",\r\n    \"dirMatriz\": false,\r\n    \"cliId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/direccion/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Obtener direccion by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/direccion/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4. Obtener todas las direcciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/direccion/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5. Eliminar direccion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/direccion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Buscar direcciones por cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/direccion/buscar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"direccion",
+								"buscar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

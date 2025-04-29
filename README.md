@@ -34,11 +34,9 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 
 ### CLIENTE
 
-```markdown
 | Método | Ruta           | Descripción         |
 | ------ | -------------- | ------------------- |
 | POST   | `/api/cliente` | Crear nuevo cliente |
-```
 
 **Body:**
 
@@ -231,3 +229,18 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 | GET    | `/api/direccion/{dirId}`         | Obtener dirección por `dirId`  |
 | GET    | `/api/direccion/buscar/{buscar}` | Buscar dirección por parámetro |
 | DELETE | `/api/direccion/{dirId}`         | Eliminar dirección por `dirId` |
+
+## 🧪 Colección de Postman
+
+Puedes importar esta colección en Postman para probar los endpoints fácilmente:
+
+📁 [Descargar colección](./src/Postman/Mi-Negocio.postman_collection.json)
+
+> Esta colección incluye todos los endpoints documentados de la API de clientes y direcciones.
+
+### 📥 ¿Cómo importar en Postman?
+
+1. Abre Postman.
+2. Haz clic en `Import`.
+3. Selecciona el archivo `./src/Postman/Mi-Negocio.postman_collection.json`.
+4. ¡Listo! Ya se puede ejecutar los endpoints.
