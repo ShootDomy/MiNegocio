@@ -36,7 +36,7 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 
 - Java 17
 - Maven 3.8+
-- PostgreSQL (u otra base de datos, según tu configuración)
+- PostgreSQL
 - (Opcional) Postman para probar la API
 
 ### 🛠 Clonar el proyecto
@@ -54,7 +54,7 @@ mvn clean install
 
 ### ⚙️ Configurar variables de entorno
 
-Asegúrese de que el archivo application.properties contenga la configuración correcta para tu base de datos:
+Asegúrese de que el archivo application.properties contenga la configuración correcta para la base de datos:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/alquimia
