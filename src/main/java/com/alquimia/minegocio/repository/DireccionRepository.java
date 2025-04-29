@@ -24,4 +24,13 @@ public interface DireccionRepository extends JpaRepository<Direccion, Long> {
             "ORDER BY CASE WHEN dir_matriz IS TRUE THEN 1 ELSE 2 END, \n" +
             "\tdir_provincia, dir_ciudad, dir_direccion ASC;", nativeQuery = true)
     List<Direccion> obtenerDireccionByCliente(@Param("buscar") Long buscar);
+
+    /**
+     * OBTENER LA DIRECCION MATRIZ DEL CLIENTE
+     */
+    @Query(value = "SELECT dir_id, dir_provincia, dir_ciudad,\n" +
+            "\tdir_matriz, dir_direccion, cli_id\n" +
+            "FROM direccion\n" +
+            "WHERE cli_id = :buscar AND dir_matriz IS TRUE;", nativeQuery = true)
+    List<Direccion> obtenerDireccionMatrizCliente(@Param("buscar") Long buscar);
 }
