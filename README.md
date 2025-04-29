@@ -13,20 +13,58 @@ Ejercicio Practico en Spring Boot
 **Body:**
 
 ```json
-[
-  {
-    "dirId": 1,
-    "calle": "Av. Siempre Viva",
-    "numero": "742",
-    "ciudad": "Springfield"
-  },
-  {
-    "dirId": 2,
-    "calle": "Calle Falsa",
-    "numero": "123",
-    "ciudad": "Shelbyville"
-  }
-]
+{
+  "cliTipoIdentificacion": "CEDULA",
+  "cliNumIdentificacion": "0987456324",
+  "cliNombre": "Maria Rosal",
+  "cliCorreo": "maria.rosal@example.com",
+  "cliTelefono": "097456324",
+  "direcciones": [
+    {
+      "dirProvincia": "Pichincha",
+      "dirCiudad": "Quito",
+      "dirdireccion": "Av. Amazonas y Naciones Unidas",
+      "dirMatriz": true
+    },
+    {
+      "dirProvincia": "Guayas",
+      "dirCiudad": "Guayaquil",
+      "dirdireccion": "Malecón 2000",
+      "dirMatriz": false
+    }
+  ]
+}
+```
+
+**RESPONSE:**
+
+```json
+{
+  "cliId": 11,
+  "cliTipoIdentificacion": "CEDULA",
+  "cliNumIdentificacion": "0987456321",
+  "cliNombre": "Maria Rosal",
+  "cliCorreo": "maria.rosal@example.com",
+  "cliTelefono": "097456324",
+  "direcciones": [
+    {
+      "dirId": 18,
+      "dirProvincia": "Pichincha",
+      "dirCiudad": "Quito",
+      "dirdireccion": "Av. Amazonas y Naciones Unidas",
+      "dirMatriz": true,
+      "cliId": 11
+    },
+    {
+      "dirId": 19,
+      "dirProvincia": "Guayas",
+      "dirCiudad": "Guayaquil",
+      "dirdireccion": "Malecón 2000",
+      "dirMatriz": false,
+      "cliId": 11
+    }
+  ]
+}
 ```
 
 | Método | Ruta                   | Descripción                    |
@@ -36,20 +74,58 @@ Ejercicio Practico en Spring Boot
 **Body:**
 
 ```json
-[
-  {
-    "dirId": 1,
-    "calle": "Av. Siempre Viva",
-    "numero": "742",
-    "ciudad": "Springfield"
-  },
-  {
-    "dirId": 2,
-    "calle": "Calle Falsa",
-    "numero": "123",
-    "ciudad": "Shelbyville"
-  }
-]
+{
+  "cliTipoIdentificacion": "CEDULA",
+  "cliNumIdentificacion": "0987456321",
+  "cliNombre": "Maria Rosal NEW",
+  "cliCorreo": "maria.rosal@example.com",
+  "cliTelefono": "097456324",
+  "direcciones": [
+    {
+      "dirProvincia": "Pichincha",
+      "dirCiudad": "Quito",
+      "dirdireccion": "Av. Amazonas y Naciones Unidas",
+      "dirMatriz": true
+    },
+    {
+      "dirProvincia": "Guayas",
+      "dirCiudad": "Guayaquil",
+      "dirdireccion": "Malecón 2000",
+      "dirMatriz": false
+    }
+  ]
+}
+```
+
+**Response:**
+
+```json
+{
+  "cliId": 11,
+  "cliTipoIdentificacion": "CEDULA",
+  "cliNumIdentificacion": "0987456321",
+  "cliNombre": "Maria Rosal NEW",
+  "cliCorreo": "maria.rosal@example.com",
+  "cliTelefono": "097456324",
+  "direcciones": [
+    {
+      "dirId": 18,
+      "dirProvincia": "Pichincha",
+      "dirCiudad": "Quito",
+      "dirdireccion": "Av. Amazonas y Naciones Unidas",
+      "dirMatriz": true,
+      "cliId": 11
+    },
+    {
+      "dirId": 19,
+      "dirProvincia": "Guayas",
+      "dirCiudad": "Guayaquil",
+      "dirdireccion": "Malecón 2000",
+      "dirMatriz": false,
+      "cliId": 11
+    }
+  ]
+}
 ```
 
 | Método | Ruta                           | Descripción                  |
