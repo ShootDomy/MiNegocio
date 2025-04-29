@@ -32,7 +32,7 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 
 ## ▶️ Cómo ejecutar el proyecto
 
-###🔧 Requisitos previos
+### 🔧 Requisitos previos
 
 - Java 17
 - Maven 3.8+
@@ -42,7 +42,7 @@ El sistema Mi Negocio permite registrar facturas eficientemente para todos los u
 ### 🛠 Clonar el proyecto
 
 ```bash
-git https://github.com/ShootDomy/MiNegocio.git
+git clone https://github.com/ShootDomy/MiNegocio.git
 cd minegocio
 ```
 
@@ -64,7 +64,7 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 ```
 
-###▶️ Ejecutar el proyecto
+### ▶️ Ejecutar el proyecto
 
 ```bash
 mvn spring-boot:run
