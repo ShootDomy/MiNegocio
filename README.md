@@ -284,3 +284,11 @@ Puede importar esta colección en Postman para probar los endpoints fácilmente:
 2. Hacer clic en `Import`.
 3. Seleccionar el archivo `./src/Postman/Mi-Negocio.postman_collection.json`.
 4. ¡Listo! Ya se puede ejecutar los endpoints.
+
+## 👨‍💻 Información del Autor
+
+Este proyecto fue creado y mantenido por **Domenica Vintimilla**.
+
+- **Correo**: [canizaresdomenica4@gmail.com](mailto:canizaresdomenica4@gmail.com)
+- **GitHub**: [https://github.com/ShootDomy](https://github.com/ShootDomy)
+- **LinkedIn**: [https://www.linkedin.com/in/domenica-vintimilla-24a735245/](https://www.linkedin.com/in/domenica-vintimilla-24a735245/)
