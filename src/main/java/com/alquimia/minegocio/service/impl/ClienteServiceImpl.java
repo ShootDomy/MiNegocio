@@ -161,7 +161,7 @@ public class ClienteServiceImpl implements ClienteService {
       }
 
       // FIXME: VALIDACIONES PARA NUMERO DE TELEFONO
-      if (cliente.getCliTelefono().length() != 10) {
+      if (clienteDto.getCliTelefono().length() != 10) {
         throw new ValidationException("EL NÚMERO DE TELÉFONO DEBE CONTENER 10 CARACTERES");
       }
 
