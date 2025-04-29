@@ -21,13 +21,31 @@ import lombok.AllArgsConstructor;
 public class ClienteServiceImpl implements ClienteService {
     private ClienteRepository clienteRepository;
 
+    // @Override
+    // public ClienteDto createCliente(ClienteDto clienteDto) {
+    // try {
+    // Cliente cliente = ClienteMapper.mapToCliente(clienteDto);
+    // Cliente guardar = clienteRepository.save(cliente);
+
+    // return ClienteMapper.mapToClienteDto(guardar);
+    // } catch (Exception e) {
+    // throw new UnsupportedOperationException("Unimplemented method
+    // 'createCliente'");
+    // }
+    // }
+
     @Override
     public ClienteDto createCliente(ClienteDto clienteDto) {
         try {
             Cliente cliente = ClienteMapper.mapToCliente(clienteDto);
-            Cliente guardar = clienteRepository.save(cliente);
 
-            return ClienteMapper.mapToClienteDto(guardar);
+            for (Direccion direccion : cliente.getDirecciones()) {
+                direccion.setCliente(cliente);
+            }
+
+            Cliente guardado = clienteRepository.save(cliente);
+
+            return ClienteMapper.mapToClienteDto(guardado);
         } catch (Exception e) {
             throw new UnsupportedOperationException("Unimplemented method 'createCliente'");
         }
