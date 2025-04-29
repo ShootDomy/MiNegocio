@@ -2,6 +2,21 @@
 
 Ejercicio Practico en Spring Boot
 
+```markdown
+# 📌 Proyecto: API de Pacientes
+
+API REST construida con Spring Boot que permite gestionar pacientes, citas médicas y profesionales de salud.
+
+## 📦 Características
+
+- CRUD de clientes y direcciones
+- Validación para creación y axtualizacion de clientes
+  - Validación de identificacion => longitud y si la identificación ya existe
+  - Validación de tamaño de telefono
+- Manejo global de errores (ExceptionHandler)
+- Base de datos relacional con JPA/Hibernate => Postgres
+```
+
 ## 🛠 Endpoints principales
 
 ### CLIENTE
