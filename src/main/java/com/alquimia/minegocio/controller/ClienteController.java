@@ -21,7 +21,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/cliente")
-public class ClienteCotroller {
+public class ClienteController {
     private ClienteService clienteService;
 
     /**
