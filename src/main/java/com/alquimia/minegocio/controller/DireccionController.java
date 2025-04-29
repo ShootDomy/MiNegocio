@@ -80,4 +80,15 @@ public class DireccionController {
         return ResponseEntity.ok("LA DIRECCIÓN FUE ELIMINADA EXITOSAMENTE");
     }
 
+    /**
+     * Controlador para obtener todas las direcciones filtradas por cliente
+     * 
+     * @param buscar
+     */
+    @GetMapping("/buscar/{buscar}")
+    public ResponseEntity<List<DireccionDto>> obtenerDireccionByCliente(@PathVariable("buscar") Long buscar) {
+        List<DireccionDto> direcciones = direccionService.obtenerDireccionByCliente(buscar);
+        return ResponseEntity.ok(direcciones);
+    }
+
 }

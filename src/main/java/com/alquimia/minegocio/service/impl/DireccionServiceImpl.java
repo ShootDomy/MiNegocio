@@ -86,4 +86,20 @@ public class DireccionServiceImpl implements DireccionService {
             throw new UnsupportedOperationException("Unimplemented method 'deletedireccionById'");
         }
     }
+
+    @Override
+    public List<DireccionDto> obtenerDireccionByCliente(Long buscar) {
+        try {
+            List<Direccion> direcciones = direccionRepository.obtenerDireccionByCliente(buscar);
+
+            System.out.println("buscar ==>>" + buscar);
+            System.out.println("clientes ==>>" + direcciones);
+
+            return direcciones.stream().map((direccion) -> DireccionMapper.mapToDireccionDto(direccion))
+                    .collect((Collectors.toList()));
+
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Unimplemented method 'obtenerDireccionByCliente'");
+        }
+    }
 }

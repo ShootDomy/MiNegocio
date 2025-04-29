@@ -105,4 +105,22 @@ public class ClienteServiceImpl implements ClienteService {
         }
     }
 
+    @Override
+    public List<ClienteDto> obtenerClienteNomIden(String buscar) {
+        try {
+            String nuevoTexto = "%" + buscar.toUpperCase() + "%";
+            List<Cliente> clientes = clienteRepository.obtenerClienteNomIden(nuevoTexto);
+
+            System.out.println("buscar ==>>" + buscar);
+            System.out.println("nuevoTexto ==>>" + nuevoTexto);
+            System.out.println("clientes ==>>" + clientes);
+
+            return clientes.stream().map((cliente) -> ClienteMapper.mapToClienteDto(cliente))
+                    .collect((Collectors.toList()));
+
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Unimplemented method 'obtenerClienteNomIden'");
+        }
+    }
+
 }

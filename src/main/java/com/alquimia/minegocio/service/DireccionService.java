@@ -14,4 +14,6 @@ public interface DireccionService {
     DireccionDto updateDireccion(Long cliId, DireccionDto direccionDto);
 
     void deleteDireccionById(Long cliId);
+
+    List<DireccionDto> obtenerDireccionByCliente(Long buscar);
 }

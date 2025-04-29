@@ -14,4 +14,6 @@ public interface ClienteService {
     ClienteDto updateCliente(Long cliId, ClienteDto clienteDto);
 
     void deleteClienteById(Long cliId);
+
+    List<ClienteDto> obtenerClienteNomIden(String buscar);
 }

@@ -72,11 +72,23 @@ public class ClienteController {
     /**
      * Controlador para eliminar clientes
      * 
-     * @param cliI
+     * @param cliId
      */
     @DeleteMapping("{cliId}")
     public ResponseEntity<String> deleteClienteById(@PathVariable("cliId") Long cliId) {
         clienteService.deleteClienteById(cliId);
         return ResponseEntity.ok("EL CLIENTE FUE ELIMINADO EXITOSAMENTE");
+    }
+
+    /**
+     * Controlador para obtener todos los clientes FILTRADO POR NOMBRE O
+     * IDENTIFICACION
+     * 
+     * @param buscar
+     */
+    @GetMapping("/buscar/{buscar}")
+    public ResponseEntity<List<ClienteDto>> obtenerClienteNomIden(@PathVariable("buscar") String buscar) {
+        List<ClienteDto> clientes = clienteService.obtenerClienteNomIden(buscar);
+        return ResponseEntity.ok(clientes);
     }
 }
