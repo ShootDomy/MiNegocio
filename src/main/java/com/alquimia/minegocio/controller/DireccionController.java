@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alquimia.minegocio.dto.DireccionDto;
+import com.alquimia.minegocio.dto.MensajeResponse;
 import com.alquimia.minegocio.service.DireccionService;
 
 import lombok.AllArgsConstructor;
@@ -75,9 +76,10 @@ public class DireccionController {
      * @param cliI
      */
     @DeleteMapping("{dirId}")
-    public ResponseEntity<String> deleteDireccionById(@PathVariable("dirId") Long dirId) {
+    public ResponseEntity<MensajeResponse> deleteDireccionById(@PathVariable("dirId") Long dirId) {
         direccionService.deleteDireccionById(dirId);
-        return ResponseEntity.ok("LA DIRECCIÓN FUE ELIMINADA EXITOSAMENTE");
+        return ResponseEntity.ok(new MensajeResponse(200, "LA DIRECCIÓN FUE ELIMINADA EXITOSAMENTE"));
+
     }
 
     /**

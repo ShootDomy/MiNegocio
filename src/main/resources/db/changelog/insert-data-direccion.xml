@@ -18,7 +18,7 @@
     <insert tableName="direccion">
         <column name="dir_provincia" value="Guayas"/>
         <column name="dir_ciudad" value="Guayaquil"/>
-        <column name="dir_direccion" value="Malecón Simón Bolívar"/>
+        <column name="dir_direccion" value="Malecon Simon Bolivar"/>
         <column name="dir_matriz" valueBoolean="false"/>
         <column name="cli_id" value="1"/>
     </insert>
@@ -26,7 +26,7 @@
     <insert tableName="direccion">
         <column name="dir_provincia" value="Guayas"/>
         <column name="dir_ciudad" value="Guayaquil"/>
-        <column name="dir_direccion" value="Malecón Simón Bolívar"/>
+        <column name="dir_direccion" value="Malecon Simon Bolivar"/>
         <column name="dir_matriz" valueBoolean="true"/>
         <column name="cli_id" value="2"/>
     </insert>

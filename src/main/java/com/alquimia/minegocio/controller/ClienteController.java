@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alquimia.minegocio.dto.ClienteDto;
+import com.alquimia.minegocio.dto.MensajeResponse;
 import com.alquimia.minegocio.service.ClienteService;
 
 import lombok.AllArgsConstructor;
@@ -75,9 +76,10 @@ public class ClienteController {
      * @param cliId
      */
     @DeleteMapping("{cliId}")
-    public ResponseEntity<String> deleteClienteById(@PathVariable("cliId") Long cliId) {
+    public ResponseEntity<MensajeResponse> deleteClienteById(@PathVariable("cliId") Long cliId) {
         clienteService.deleteClienteById(cliId);
-        return ResponseEntity.ok("EL CLIENTE FUE ELIMINADO EXITOSAMENTE");
+        return ResponseEntity.ok(new MensajeResponse(200, "EL CLIENTE FUE ELIMINADO EXITOSAMENTE"));
+
     }
 
     /**
