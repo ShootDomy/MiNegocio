@@ -60,6 +60,16 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 ```
 
+### ⚙️ Validaciones extra
+
+Configurar UK para validacion de una dirección matriz por cliente
+
+```sql
+CREATE UNIQUE INDEX uq_direccion_matriz
+ON direccion (cli_id)
+WHERE dir_matriz = true;
+```
+
 ### ▶️ Ejecutar el proyecto
 
 ```bash
@@ -285,7 +295,7 @@ Puede importar esta colección en Postman para probar los endpoints fácilmente:
 
 A continuación se muestra un video demostrando el funcionamiento y resultados del sistema:
 
-[![Ver video](https://www.youtube.com/watch?v=YUwqr4Bw6p0)](https://www.youtube.com/watch?v=YUwqr4Bw6p0)
+🎥 [Ver video en YouTube](https://www.youtube.com/watch?v=YUwqr4Bw6p0)
 
 ## 👨‍💻 Información del Autor
 
