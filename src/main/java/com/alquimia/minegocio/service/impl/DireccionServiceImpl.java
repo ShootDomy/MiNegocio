@@ -27,12 +27,11 @@ public class DireccionServiceImpl implements DireccionService {
       Direccion direccion = DireccionMapper.mapToDireccion(direccionDto);
 
       // TODO: VALIDACIONES
-
       // FIXME: VALIDACION PARA NO CREAR MAS DE UNA DIRECCION MATRIZ
       List<Direccion> dirMatriz = direccionRepository
           .obtenerDireccionMatrizCliente(direccion.getCliente().getCliId());
 
-      if (dirMatriz != null && !dirMatriz.isEmpty()) {
+      if (dirMatriz != null && !dirMatriz.isEmpty() && direccionDto.getDirMatriz() == true) {
         throw new BusinessException("EL CLIENTE YA TIENE UNA DIRECCION MATRIZ REGISTRADA");
       }
 
