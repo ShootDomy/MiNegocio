@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+       http://www.liquibase.org/xml/ns/dbchangelog
+       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Tabla cliente --> 
+    <changeSet id="1-create-cliente" author="ShootDomy">
+        <createTable tableName="cliente">
+            <column name="cli_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cli_tipo_identificacion" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="cli_num_identificacion" type="VARCHAR(13)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="cli_nombre" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="cli_correo" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="cli_telefono" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Tabla direccion -->
+    <changeSet id="2-create-direccion" author="ShootDomy">
+        <createTable tableName="direccion">
+            <column name="dir_id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column> 
+            <column name="dir_provincia" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dir_ciudad" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dir_direccion" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dir_matriz" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cli_id" type="BIGINT">
+                <constraints nullable="false" foreignKeyName="fk_direccion_cliente" references="cliente(cli_id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

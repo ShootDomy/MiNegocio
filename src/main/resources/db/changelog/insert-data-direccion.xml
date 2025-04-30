@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+<changeSet id="insert-direcciones" author="ShootDomy">
+    <insert tableName="direccion">
+        <column name="dir_provincia" value="Pichincha"/>
+        <column name="dir_ciudad" value="Quito"/>
+        <column name="dir_direccion" value="Av. Amazonas y Naciones Unidas"/>
+        <column name="dir_matriz" valueBoolean="true"/>
+        <column name="cli_id" value="1"/>
+    </insert>
+
+    <insert tableName="direccion">
+        <column name="dir_provincia" value="Guayas"/>
+        <column name="dir_ciudad" value="Guayaquil"/>
+        <column name="dir_direccion" value="Malecón Simón Bolívar"/>
+        <column name="dir_matriz" valueBoolean="false"/>
+        <column name="cli_id" value="1"/>
+    </insert>
+
+    <insert tableName="direccion">
+        <column name="dir_provincia" value="Guayas"/>
+        <column name="dir_ciudad" value="Guayaquil"/>
+        <column name="dir_direccion" value="Malecón Simón Bolívar"/>
+        <column name="dir_matriz" valueBoolean="true"/>
+        <column name="cli_id" value="2"/>
+    </insert>
+</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="insert-clientes" author="ShootDomy">
+        <insert tableName="cliente">
+            <column name="cli_tipo_identificacion" value="CEDULA"/>
+            <column name="cli_num_identificacion" value="03265789451"/>
+            <column name="cli_nombre" value="Lola Perez"/>
+            <column name="cli_correo" value="lola.perez@example.com"/>
+            <column name="cli_telefono" value="0991234567"/>
+        </insert>
+
+        <insert tableName="cliente">
+            <column name="cli_tipo_identificacion" value="RUC"/>
+            <column name="cli_num_identificacion" value="1790012345001"/>
+            <column name="cli_nombre" value="Comercial XYZ S.A."/>
+            <column name="cli_correo" value="contacto@xyz.com"/>
+            <column name="cli_telefono" value="022567890"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
