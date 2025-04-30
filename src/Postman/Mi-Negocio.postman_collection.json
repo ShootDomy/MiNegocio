@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "/*{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0104700833\",\r\n    \"cliNombre\": \"FERNANDA Vintimilla\",\r\n    \"cliCorreo\": \"correo@gmail.com\",\r\n    \"cliTelefono\": \"9999999999\"\r\n}*/\r\n\r\n{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0987456324\",\r\n    \"cliNombre\": \"Maria Rosal\",\r\n    \"cliCorreo\": \"maria.rosal@example.com\",\r\n    \"cliTelefono\": \"097456324\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas y Naciones Unidas\",\r\n            \"dirMatriz\": true\r\n        },\r\n        {\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2000\",\r\n            \"dirMatriz\": false\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0245874569\",\r\n    \"cliNombre\": \"Perla Saba\",\r\n    \"cliCorreo\": \"perla.saba@example.com\",\r\n    \"cliTelefono\": \"0957456326\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas y Naciones Unidas\",\r\n            \"dirMatriz\": true\r\n        },\r\n        {\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2000\",\r\n            \"dirMatriz\": false\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -45,7 +45,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "/*{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0104700822\",\r\n    \"cliNombre\": \"FERNANDA Vintimilla\",\r\n    \"cliCorreo\": \"correo@gmail.com\",\r\n    \"cliTelefono\": \"9999999999\"\r\n}*/\r\n{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0987456321\",\r\n    \"cliNombre\": \"Maria Rosal NEW\",\r\n    \"cliCorreo\": \"maria.rosal@example.com\",\r\n    \"cliTelefono\": \"097456324\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas y Naciones Unidas\",\r\n            \"dirMatriz\": true\r\n        },\r\n        {\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2000\",\r\n            \"dirMatriz\": false\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"cliTipoIdentificacion\": \"CEDULA\",\r\n    \"cliNumIdentificacion\": \"0245874569\",\r\n    \"cliNombre\": \"Perla Saba NEW\",\r\n    \"cliCorreo\": \"perla.saba@example.com\",\r\n    \"cliTelefono\": \"0957456326\",\r\n    \"direcciones\": [\r\n        {\r\n            \"dirId\": 25,\r\n            \"dirProvincia\": \"Pichincha\",\r\n            \"dirCiudad\": \"Quito\",\r\n            \"dirdireccion\": \"Av. Amazonas\",\r\n            \"dirMatriz\": true,\r\n            \"cliId\": 17\r\n        },\r\n        {\r\n            \"dirId\": 26,\r\n            \"dirProvincia\": \"Guayas\",\r\n            \"dirCiudad\": \"Guayaquil\",\r\n            \"dirdireccion\": \"Malecón 2001\",\r\n            \"dirMatriz\": false,\r\n            \"cliId\": 17\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -53,7 +53,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/cliente/11",
+							"raw": "http://localhost:8080/api/cliente/17",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -62,35 +62,14 @@
 							"path": [
 								"api",
 								"cliente",
-								"11"
+								"17"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "3. Obtener cliente by id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/cliente/10",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"cliente",
-								"10"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "4. Obtener todos los clientes",
+					"name": "3. Obtener todos los clientes",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -111,12 +90,12 @@
 					"response": []
 				},
 				{
-					"name": "5. Eliminar cliente",
+					"name": "4. Obtener cliente by id",
 					"request": {
-						"method": "DELETE",
+						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/cliente/10",
+							"raw": "http://localhost:8080/api/cliente/17",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -125,19 +104,19 @@
 							"path": [
 								"api",
 								"cliente",
-								"10"
+								"17"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "6. Buscar por nombre o identificacion",
+					"name": "5. Buscar por nombre o identificacion",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/cliente/buscar/patch",
+							"raw": "http://localhost:8080/api/cliente/buscar/perla",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -147,7 +126,28 @@
 								"api",
 								"cliente",
 								"buscar",
-								"patch"
+								"perla"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "6. Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cliente/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cliente",
+								"17"
 							]
 						}
 					},
@@ -165,7 +165,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO 1\",\r\n    \"dirdireccion\": \"ASD\",\r\n    \"dirMatriz\": true,\r\n    \"cliId\": 2\r\n}",
+							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO\",\r\n    \"dirdireccion\": \"QUITO ESTE\",\r\n    \"dirMatriz\": false,\r\n    \"cliId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -194,7 +194,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO\",\r\n    \"dirdireccion\": \"QUITO NORTE PATCH\",\r\n    \"dirMatriz\": false,\r\n    \"cliId\": 6\r\n}",
+							"raw": "{\r\n    \"dirProvincia\": \"PICHINCHA\",\r\n    \"dirCiudad\": \"QUITO\",\r\n    \"dirdireccion\": \"QUITO ESTE PATCH\",\r\n    \"dirMatriz\": false,\r\n    \"cliId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -202,7 +202,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/direccion/4",
+							"raw": "http://localhost:8080/api/direccion/28",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -211,7 +211,7 @@
 							"path": [
 								"api",
 								"direccion",
-								"4"
+								"28"
 							]
 						}
 					},
@@ -265,7 +265,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/direccion/1",
+							"raw": "http://localhost:8080/api/direccion/28",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -274,7 +274,7 @@
 							"path": [
 								"api",
 								"direccion",
-								"1"
+								"28"
 							]
 						}
 					},

@@ -65,7 +65,7 @@ spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 Configurar UK para validacion de una dirección matriz por cliente
 
 ```sql
-CREATE UNIQUE INDEX uq_direccion_matriz
+CREATE UNIQUE INDEX uk_direccion_matriz
 ON direccion (cli_id)
 WHERE dir_matriz = true;
 ```
