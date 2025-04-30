@@ -53,10 +53,33 @@ mvn clean install
 Asegúrese de que el archivo application.properties contenga la configuración correcta para la base de datos:
 
 ```properties
+spring.application.name=minegocio
+
+# ===============================
+# DATASOURCE CONFIGURATION
+# ===============================
 spring.datasource.url=jdbc:postgresql://localhost:5432/alquimia
 spring.datasource.username=postgres
 spring.datasource.password=admin
 spring.datasource.driver-class-name=org.postgresql.Driver
+
+# ===============================
+# JPA / HIBERNATE
+# ===============================
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql=TRACE
+
+# ===============================
+# LIQUIBASE
+# ===============================
+spring.liquibase.enabled=true
+spring.liquibase.change-log=classpath:/db/changelog/liquibase-changelog.xml
+spring.liquibase.contexts=dev
+spring.liquibase.default-schema=public
+
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 ```
 
