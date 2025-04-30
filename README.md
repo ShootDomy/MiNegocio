@@ -1,8 +1,4 @@
-# Proyecto Mi Negocio
-
-Ejercicio Practico en Spring Boot
-
-# 📌 Proyecto: API de Clientes
+# 📌 Proyecto: Mi Negocio
 
 El sistema Mi Negocio permite registrar facturas eficientemente para todos los usuarios, ya sean consumidores finales o clientes registrados. En la actualidad, se pretende optimizar el proceso de facturación a través de la incorporación de una buena administración de clientes.
 
@@ -284,6 +280,12 @@ Puede importar esta colección en Postman para probar los endpoints fácilmente:
 2. Hacer clic en `Import`.
 3. Seleccionar el archivo `./src/Postman/Mi-Negocio.postman_collection.json`.
 4. ¡Listo! Ya se puede ejecutar los endpoints.
+
+## 📊 Resultados
+
+A continuación se muestra un video demostrando el funcionamiento y resultados del sistema:
+
+[![Ver video](https://www.youtube.com/watch?v=YUwqr4Bw6p0)](https://www.youtube.com/watch?v=YUwqr4Bw6p0)
 
 ## 👨‍💻 Información del Autor
 
